@@ -22,8 +22,8 @@ async function deployToken(deployer, network) {
   await deployer.deploy(GRAPImplementation);
   if (network != "mainnet") {
     await deployer.deploy(GRAPProxy,
-      "GRAP",
-      "GRAP",
+      "XYZ",
+      "XYZ",
       18,
       "9000000000000000000000000", // print extra few mil for user
       GRAPImplementation.address,
@@ -31,8 +31,8 @@ async function deployToken(deployer, network) {
     );
   } else {
     await deployer.deploy(GRAPProxy,
-      "GRAP",
-      "GRAP",
+      "XYZ",
+      "XYZ",
       18,
       "2000000000000000000000000",
       GRAPImplementation.address,
